@@ -1,12 +1,12 @@
 #let format_strane = "iso-b5"         // могуће вредности: iso-b5, a4
-#let naslov = "Шаблон и упутство за писање завршних радова"
-#let autor = "Уписати име и презиме"
+#let naslov = "Додавање подршке за библиотеку Keras 3 у радно окружење TensorFlow Federated"
+#let autor = "Марко Митошевић"
 
 // На енглеском
-#let naslov_eng = "Template and tutorial for thesis preparation"
-#let autor_eng = "Upisati ime i prezime na latinici"
+#let naslov_eng = "Adding support for the Keras 3 library to the TensorFlow Federated framework"
+#let autor_eng = "Marko Mitosevic"
 
-#let indeks = "Уписати индекс"
+#let indeks = "SV56/2021"
 
 // Име и презиме ментора
 #let mentor = "Игор Дејановић"
@@ -16,8 +16,8 @@
 // Скинути коментаре са одговарајућих линија
 #let studijski_program = "Софтверско инжењерство и информационе технологије"
 //#let studijski_program = "Рачунарство и аутоматика"
-#let stepen = "Мастер академске студије"
-//#let stepen = "Основне академске студије"
+//#let stepen = "Мастер академске студије"
+#let stepen = "Основне академске студије"
 
 #let godina = [#datetime.today().year()]
 
@@ -27,14 +27,14 @@
 // Такође унети ручно и број прилога.
 #let broj_priloga = 0
 
-#let kljucne_reci = "Шаблон, завршни рад, упутство"
+#let kljucne_reci = "Keras, TensorFlow Federated, IDE"
 #let apstrakt = [
      Овај документ представља упутство за писање завршних радова на Факултету
      техничких наука Универзитета у Новом Саду. У исто време је и шаблон за Typst.
 ]
 
 // На енглеском
-#let kljucne_reci_eng = "Template, thesis, tutorial"
+#let kljucne_reci_eng = "Keras, TensorFlow Federated, IDE"
 #let apstrakt_eng = [
      This document provides guidelines for writing final theses at the Faculty
      of Technical Sciences, University of Novi Sad. At the same time, it serves
