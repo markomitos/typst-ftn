@@ -22,6 +22,7 @@
 #show link: set text(blue)
 #show cite: set text(blue)
 #show ref: set text(blue)
+#show heading: set text(hyphenate: false)
 
 #show figure.where(
   kind: table
@@ -33,15 +34,16 @@
 #import "@preview/hydra:0.6.2": hydra
 
 #show heading.where(level: 1): (it) => {
-      pagebreak(to: "odd", weak: true)
-      set block(spacing: 8pt)
-      if heading.numbering != none {
-          text("Глава " + counter(heading).display(), size: 22pt)
-      }
-      line(length: 100%)
-      rect(align(right + horizon, text(it.body, size: 22pt)), fill: white, width: 100%)
-      line(length: 100%)
-      v(1em)
+    pagebreak(to: "odd", weak: true)
+    set block(spacing: 8pt)
+    if heading.numbering != none {
+        text("Глава " + counter(heading).display(), size: 22pt)
+    }
+    set par(justify: false)
+    line(length: 100%)
+    rect(align(right + horizon, text(it.body, size: 22pt)), fill: white, width: 100%)
+    line(length: 100%)
+    v(1em)
 }
 
 #outline(title: [Садржај], depth: 2)
