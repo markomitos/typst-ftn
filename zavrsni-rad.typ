@@ -75,12 +75,13 @@
 
 
 
+#set heading(numbering: none)
+#show outline: set heading(outlined: true)
 #outline(title: "Списак слика", target: figure.where(kind: image))
 #outline(title: "Списак листинга", target: figure.where(kind: raw))
 #outline(title: "Списак табела", target: figure.where(kind: table))
 
 
-#set heading(numbering: none)
 #show figure: it => {
     set text(size: 9pt)
     set block(breakable: true)
