@@ -79,7 +79,23 @@
 #outline(title: "Списак листинга", target: figure.where(kind: raw))
 #outline(title: "Списак табела", target: figure.where(kind: table))
 
+
 #set heading(numbering: none)
+#show figure: it => {
+    set text(size: 9pt)
+    set block(breakable: true)
+    set table(
+        columns: (1fr, 4fr),
+        align: left,
+        inset: 8pt,
+        stroke: 0pt)
+    it
+}
+
+// TODO: Додаци - искоментарисати ако се не користе
+#include "poglavlja/dodatak 1 - skracenice.typ"
+#include "poglavlja/dodatak 2 - pojmovi.typ"
+
 #include "biografija.typ"
 
 #bibliography(title: [Литература], "literatura.bib")

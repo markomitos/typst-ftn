@@ -11,3 +11,9 @@
 
   (chapters, pages, citations, tables, images, graphics, appendices).map(str).join("/")
 }
+
+#let dodatak(d) = figure(
+    kind: "dodatak",
+    supplement: [Додатак],
+    d
+)
