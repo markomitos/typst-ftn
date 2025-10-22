@@ -77,9 +77,26 @@
 
 #set heading(numbering: none)
 #show outline: set heading(outlined: true)
-#outline(title: "Списак слика", target: figure.where(kind: image))
-#outline(title: "Списак листинга", target: figure.where(kind: raw))
-#outline(title: "Списак табела", target: figure.where(kind: table))
+#context {
+    if query(figure.where(kind: image)).len() > 0  [
+        = Списак слика
+        <spisak-slika>
+        #outline(title: none, target: figure.where(kind: image))
+    ]
+
+    if query(figure.where(kind: image)).len() > 0  [
+        = Списак листинга
+        <spisak-listinga>
+        #outline(title: none, target: figure.where(kind: raw))
+    ]
+
+    if query(figure.where(kind: table)).len() > 0  [
+        = Списак табела
+        <spisak-tabela>
+        #outline(title: none, target: figure.where(kind: table))
+    ]
+}
+
 
 
 #show figure: it => {
