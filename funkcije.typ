@@ -17,3 +17,24 @@
     supplement: [Додатак],
     d
 )
+
+// Маркирање потребних измена. Базирано на
+// https://github.com/typst/typst/issues/662#issuecomment-1516709607
+#let todo(x) = [ #text([TODO: #x <todo>], red) ]
+
+#let todos() = context {
+    let elems = query(
+        <todo>
+    )
+
+    if elems.len() == 0 {
+        return
+    }
+
+    pagebreak()
+    [= TODOs <todos>]
+
+    for body in elems {
+        text([+ #link(body.location(), body)], red)
+    }
+}

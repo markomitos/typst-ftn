@@ -117,3 +117,8 @@
 #include "biografija.typ"
 
 #bibliography(title: [Литература], "literatura.bib")
+
+// Потребне исправке и дораде. У тексту користити са
+// #todo[Коментар шта треба урадити]
+// Функција todo се налази у модулу funkcije.typ
+#todos()
