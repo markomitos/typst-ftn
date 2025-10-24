@@ -38,3 +38,6 @@
         text([+ #link(body.location(), body)], red)
     }
 }
+
+#let green(x) = highlight(fill: rgb("#a3d450"), x)
+#let red(x) = highlight(fill: rgb("#eb4646"), x)
