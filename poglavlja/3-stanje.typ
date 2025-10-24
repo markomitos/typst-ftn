@@ -375,31 +375,26 @@ keras.Variable, keras.Metric, keras.Layer. Провера омогућава о�
 
 #pagebreak()
 
-#figure(
+#figure([
+
     ```
     trainable_variables = tuple(
     ```
-)<lst:dont-list-4>
 
-#figure(
-       highlight(fill: rgb("#eb4646"),
-       [```
+    #red[```
        v for v in captured_variables if v in cloned_model.trainable_variables
-       ```]),
-  )<lst:dont-list-5>
+       ```]
 
-#figure(
-    highlight(fill: rgb("#a3d450"),[
-    ```
-    v for v in captured_variables if keras_compat.get_variable(v) in keras_compat.get_variables(cloned_model.trainable_variables)
-    ```
-  ])
-)<lst:dont-list-6>
+    #green[
+        ```
+        v for v in captured_variables if keras_compat.get_variable(v) in keras_compat.get_variables(cloned_model.trainable_variables)
+        ```
+    ]
 
-#figure(
-    ```
-        )
-    ```
+      ```
+          )
+      ```
+    ]
     ,caption: [Исечак функције functional_model_from_keras, који приказује додавање апстракције за добављање промењљивих модела преко компоненте keras\_compat.]
 )<lst:apstrakcija>
 

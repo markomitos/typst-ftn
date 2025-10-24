@@ -25,7 +25,7 @@
 // За сада унети ручно број референци/цитата из поглавља Литература.
 #let broj_citata = 17
 // Такође унети ручно и број прилога.
-#let broj_priloga = 22
+#let broj_priloga = 14
 
 #let kljucne_reci = "Keras, TensorFlow Federated, IDE"
 #let apstrakt = [
