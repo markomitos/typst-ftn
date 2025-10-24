@@ -23,22 +23,21 @@
 
 // FIXME: Аутоматизовати бројање цитата и прилога
 // За сада унети ручно број референци из поглавља Литература.
-#let broj_citata = 4
+#let broj_citata = 17
 // Такође унети ручно и број прилога.
-#let broj_priloga = 0
+#let broj_priloga = 22
 
 #let kljucne_reci = "Keras, TensorFlow Federated, IDE"
 #let apstrakt = [
-     Овај документ представља упутство за писање завршних радова на Факултету
-     техничких наука Универзитета у Новом Саду. У исто време је и шаблон за Typst.
+     Овај рад се бави проблематиком додавања подшке за библиотеку Keras 3 у радно окружење
+     TensorFlow Federated.
 ]
 
 // На енглеском
 #let kljucne_reci_eng = "Keras, TensorFlow Federated, IDE"
 #let apstrakt_eng = [
-     This document provides guidelines for writing final theses at the Faculty
-     of Technical Sciences, University of Novi Sad. At the same time, it serves
-     as a Typst template.
+    This paper focuses on the issue of Adding support for the Keras 3 library to
+    the TensorFlow Federated framework.
 ]
 
 // TODO: Текст задатка добијате од ментора. Заменити доле #lorem(100) са текстом задатка.
