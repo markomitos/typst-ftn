@@ -114,6 +114,7 @@
 
 #include "biografija.typ"
 
+#show "Available at:": "Доступно на "
 #bibliography(title: [Литература], "literatura.bib")
 #checkbib()
 
