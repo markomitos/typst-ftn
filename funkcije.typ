@@ -47,9 +47,8 @@
     let bib = load-bibliography(bibtex_string)
     let mandatory_fields = (
         "online": ("title", "year", "url", "urldate"),
-        "article": ("author", "year", "title", "pages", "volume", "journal", "doi"),
-        "inproceedings": ("author", "year", "title", "booktitle",
-                          "pages", "volume", "organization", "doi"),
+        "article": ("author", "year", "title", "journal"),
+        "inproceedings": ("author", "year", "title", "booktitle"),
     )
     let errors = ()
 
