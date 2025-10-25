@@ -38,3 +38,42 @@
         text([+ #link(body.location(), body)], red)
     }
 }
+
+// Провера недостајућих поља у референцама
+#let checkbib() = context {
+    import "@preview/citegeist:0.2.0": load-bibliography
+    import "funkcije.typ": todo
+    let bibtex_string = read("literatura.bib")
+    let bib = load-bibliography(bibtex_string)
+    let mandatory_fields = (
+        "online": ("title", "year", "url", "urldate"),
+        "article": ("author", "year", "title", "pages", "volume", "journal", "doi"),
+        "inproceedings": ("author", "year", "title", "booktitle",
+                          "pages", "volume", "organization", "doi"),
+    )
+    let errors = ()
+
+
+    for (key, entry) in bib {
+        for (bib_type, fields) in mandatory_fields {
+            if entry.at("entry_type") == bib_type {
+                for field in fields {
+                    if field not in entry.at("fields") {
+                        errors.push((key, field))
+                    }
+                }
+            }
+        }
+    }
+
+    if errors.len() == 0 {
+        return
+    }
+
+    pagebreak()
+    [= Грешке у референцама <refgreske>]
+
+    for (key, field) in errors {
+        [+ Референци #raw(key) недостаје поље #raw(field)]
+    }
+}

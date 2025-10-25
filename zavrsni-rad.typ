@@ -115,6 +115,7 @@
 #include "biografija.typ"
 
 #bibliography(title: [Литература], "literatura.bib")
+#checkbib()
 
 // Потребне исправке и дораде. У тексту користити са
 // #todo[Коментар шта треба урадити]
