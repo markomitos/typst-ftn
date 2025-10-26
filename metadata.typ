@@ -24,8 +24,6 @@
 // FIXME: Аутоматизовати бројање цитата и прилога
 // За сада унети ручно број референци/цитата из поглавља Литература.
 #let broj_citata = 4
-// Такође унети ручно и број прилога.
-#let broj_priloga = 2
 
 #let kljucne_reci = "Шаблон, завршни рад, упутство"
 #let apstrakt = [
@@ -84,4 +82,4 @@
 
 #import "funkcije.typ": *
 // Поглавља/страна/цитата/табела/слика/графика/прилога
-#let fizicki_opis = physical(broj_citata, broj_priloga)
+#let fizicki_opis = physical(broj_citata)
