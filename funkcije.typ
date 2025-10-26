@@ -1,7 +1,8 @@
 #import "@preview/citegeist:0.2.0": load-bibliography
 
 #let physical() = context {
-    let chapters = query(heading.where(level: 1, outlined: true)).len()
+    let chapters = query(heading.where(level: 1, outlined: true))
+        .filter(it => not it.numbering == none).len()
     let pages = counter(page).final().first()
 
     let bibtex_string = read("literatura.bib")
