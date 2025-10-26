@@ -21,10 +21,6 @@
 
 #let godina = [#datetime.today().year()]
 
-// FIXME: Аутоматизовати бројање цитата и прилога
-// За сада унети ручно број референци/цитата из поглавља Литература.
-#let broj_citata = 4
-
 #let kljucne_reci = "Шаблон, завршни рад, упутство"
 #let apstrakt = [
      Овај документ представља упутство за писање завршних радова на Факултету
@@ -82,4 +78,4 @@
 
 #import "funkcije.typ": *
 // Поглавља/страна/цитата/табела/слика/графика/прилога
-#let fizicki_opis = physical(broj_citata)
+#let fizicki_opis = physical()

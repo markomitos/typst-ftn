@@ -1,7 +1,13 @@
-#let physical(citations) = context {
+#import "@preview/citegeist:0.2.0": load-bibliography
+
+#let physical() = context {
     let chapters = query(heading.where(level: 1, outlined: true)).len()
     let pages = counter(page).final().first()
-    //let citations = 0 //FIXME
+
+    let bibtex_string = read("literatura.bib")
+    let bib = load-bibliography(bibtex_string)
+    let citations = bib.len()
+
     let tables = query(figure.where(kind: table)).len()
     let images = query(
         figure.where(kind: image).or(figure.where(kind: raw))
@@ -11,6 +17,7 @@
     let appendices = query(heading.where(level: 1))
         .filter(x => x.has("label")
                 and repr(x.label).starts-with("<dodatak")).len()
+
 
   (chapters, pages, citations, tables, images, graphics, appendices).map(str).join("/")
 }
@@ -44,8 +51,6 @@
 
 // Провера недостајућих поља у референцама
 #let checkbib() = context {
-    import "@preview/citegeist:0.2.0": load-bibliography
-    import "funkcije.typ": todo
     let bibtex_string = read("literatura.bib")
     let bib = load-bibliography(bibtex_string)
     let mandatory_fields = (
@@ -55,7 +60,6 @@
         "inproceedings": ("author", "year", "title", "booktitle"),
     )
     let errors = ()
-
 
     for (key, entry) in bib {
         for (bib_type, fields) in mandatory_fields {
