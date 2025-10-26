@@ -48,6 +48,7 @@
     let mandatory_fields = (
         "online": ("title", "year", "url", "urldate"),
         "article": ("author", "year", "title", "journal"),
+        "book": ("author", "year", "title", "publisher"),
         "inproceedings": ("author", "year", "title", "booktitle"),
     )
     let errors = ()
