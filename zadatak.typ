@@ -13,7 +13,7 @@
 #let clr = white
 
 #block({
-  image("logo/Q2_NA_04-03 Zadatak za izradu rada-crop.pdf", width: 100%)
+  image("formulari/Q2_NA_04-03 Zadatak za izradu rada-crop.pdf", width: 100%)
   place(left + top,
       dy: 15.6%,
       dx: 18%,

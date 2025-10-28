@@ -20,7 +20,7 @@
 #let left_edge_eng_komisija = 36.9%
 
 #block({
-  image("logo/Q2_NA_04-05 KDI-crop.pdf", height: 100%)
+  image("formulari/Q2_NA_04-05 KDI-crop.pdf", height: 100%)
   place(left + top,
       dy: 16.7%,
       dx: left_edge,
@@ -157,7 +157,7 @@
 #pagebreak()
 
 #block({
-  image("logo/Q2_NA_04-05 KDI-crop.pdf", height: 100%, page: 2)
+  image("formulari/Q2_NA_04-05 KDI-crop.pdf", height: 100%, page: 2)
   place(left + top,
       dy: 15.52%,
       dx: left_edge_eng,
