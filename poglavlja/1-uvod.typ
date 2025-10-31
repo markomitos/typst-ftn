@@ -1,3 +1,4 @@
+#import "../funkcije.typ": todo
 = Увод
 <увод>
 
