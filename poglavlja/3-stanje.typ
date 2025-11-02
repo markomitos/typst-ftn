@@ -338,64 +338,39 @@ def keras_dtype_to_tf(dtype_str):
 Постојећа функција `from_keras_model` у компоненти _models_ претвара _Keras_ модел
 у TFF модел. Да би истовремено подржала обе верзије библиотеке _Keras_ употребљена је
 унија типова података. На листингу @lst:unija_tipova приказан је исечак функције,
-који приказује имплементацију унију типова. Рефакторисан код је обележен бојама,
-где је у црвеној боји је приказана код пре рефакторисања, док је зеленом бојом
+који приказује имплементацију унију типова. Рефакторисан код је обележен знаковима на почетку реда,
+где је знаком минус приказан код пре рефакторисања, док је знаком плус
 приказан код додат у рефакторисању.
 
-#figure([
-    #green[
-        ```python
-        Model = Union[tf_keras.Model, keras.Model]
-        ```
-    ]
-
+#figure((
     ```python
+    + Model = Union[tf_keras.Model, keras.Model]
     def from_keras_model(
+        - keras_model: tf_keras.Model,
+        + keras_model: Model,
     ```
-
-    #red[
-       ```python
-       keras_model: tf_keras.Model,
-       ```
-    ]
-
-    #green[
-        ```python
-         keras_model: Model,
-        ```
-    ]],
+    ),
     caption: [Исечак функције `from_keras_model`, који приказује имплементацију уније типова.]
 )<lst:unija_tipova>
 
 Поред примене уније типова примењена је и апстракција преко замене директних позива
 са позивом помоћних функција из додате компоненте `keras_compat`. На листингу @lst:unija_tipova
 приказан је исечак функције `functional_model_from_keras`, који приказује додавање апстракције за
-добављање промењљивих модела преко компоненте `keras_compat`. Рефакторисан код је обележен бојама,
-где је у црвеној боји је приказана код пре рефакторисања, док је зеленом бојом приказан код додат
-у рефакторисању.
+добављање промењљивих модела преко компоненте `keras_compat`. Рефакторисан код је обележен знаковима
+на почетку реда, где је знаком минус приказан код пре рефакторисања, док је знаком плус
+приказан код додат у рефакторисању.
 
 #pagebreak()
 
-#figure([
+#figure((
 
-    ```
+    ```python
     trainable_variables = tuple(
-    ```
-
-    #red[```
-       v for v in captured_variables if v in cloned_model.trainable_variables
-       ```]
-
-    #green[
-        ```
-        v for v in captured_variables if keras_compat.get_variable(v) in keras_compat.get_variables(cloned_model.trainable_variables)
-        ```
-    ]
-
-      ```
+       - v for v in captured_variables if v in cloned_model.trainable_variables
+       + v for v in captured_variables if keras_compat.get_variable(v) in keras_compat.get_variables(cloned_model.trainable_variables)
           )
       ```
-    ]
+    )
     ,caption: [Исечак функције `functional_model_from_keras`, који приказује додавање апстракције за добављање промењљивих модела преко компоненте `keras_compat`.]
 )<lst:apstrakcija>
 

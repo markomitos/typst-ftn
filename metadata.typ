@@ -23,15 +23,25 @@
 
 #let kljucne_reci = "Keras, TensorFlow Federated, IDE"
 #let apstrakt = [
-     Овај рад се бави проблематиком додавања подшке за библиотеку Keras 3 у радно окружење
-     TensorFlow Federated.
+Примарна мотивација овог рада је унапређење алата за претрагу _Search Everywhere_
+(SE) у  интегрисаним развојном окружењу (IDE) _IntelliJ_, помоћу модела машинског учења.
+Због захтева за приватношћу података корисника, потребна је примена федеративног учења (FL).
+Међутим, водеће FL окружење, TensorFlow Federated (TFF) има недостатак подршке
+за библиотеку _Keras_ 3. Овај рад се бави анализом, дизајном и имплементацијом решења за
+додавање подршке за библиотеку _Keras_ 3 у TFF. Циљ је постигнут имплементацијом паралелне подршке, чиме је очувана пуна компатибилност
+са постојећом _Keras_ 2 архитектуром.
 ]
 
 // На енглеском
 #let kljucne_reci_eng = "Keras, TensorFlow Federated, IDE"
 #let apstrakt_eng = [
-    This paper focuses on the issue of Adding support for the Keras 3 library to
-    the TensorFlow Federated framework.
+The primary motivation for this paper is the improvement of the Search Everywhere (SE)
+tool within the IntelliJ Integrated Development Environment (IDE) using machine learning
+models. Due to user data privacy requirements, the application of Federated Learning (FL)
+is necessary. However, the leading FL framework, TensorFlow Federated (TFF), lacks support
+for the Keras 3 library. This paper addresses the analysis, design, and implementation of a
+solution for adding Keras 3 library support to TFF. The objective was achieved by implementing
+parallel support, thereby preserving full compatibility with the existing Keras 2 architecture.
 ]
 
 // TODO: Текст задатка добијате од ментора. Заменити доле #lorem(100) са текстом задатка.
