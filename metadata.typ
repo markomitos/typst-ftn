@@ -46,19 +46,26 @@ parallel support, thereby preserving full compatibility with the existing Keras 
 
 // TODO: Текст задатка добијате од ментора. Заменити доле #lorem(100) са текстом задатка.
 #let zadatak = [
-     #lorem(100)
+    Анализирати постојећу архитектуру TensorFlow Federated оквира и његову зависност
+    од Keras 2 са акцентом на потребно рефакторисање у циљу пружање подршке за
+    Keras 3. Имплементирати рефакторисање и адаптацију тако да се обезбеди подршка
+    за Keras 3. Проширити скуп тестова тако да буду покривени и случајеви коришћења
+    Keras 3 библиотеке.
+
+    При изради користити препоручену праксу из области софтверског инжењерства.
+    Детаљно документовати решење.
 ]
 
 // TODO: Датум одбране и чланове комисије добијате од ментора
-#let datum_odbrane = "01.01.2025"
-#let komisija_predsednik = "Петар Петровић"
+#let datum_odbrane = "06.11.2025"
+#let komisija_predsednik = "Марко Марковић"
 #let komisija_predsednik_zvanje = "ванредни професор"
-#let komisija_clan = "Марко Марковић"
+#let komisija_clan = "Синиша Николић"
 #let komisija_clan_zvanje = "доцент"
 
 // На енглеском уписати чланове на латиници
-#let komisija_predsednik_eng = "Petar Petrović"
-#let komisija_clan_eng = "Marko Marković"
+#let komisija_predsednik_eng = "Marko Marković"
+#let komisija_clan_eng = "Siniša Nikolić"
 #let mentor_eng = "Igor Dejanović"
 
 
